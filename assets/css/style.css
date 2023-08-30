@@ -2,7 +2,7 @@
 :root {
     --navy: #13293d;
     --white: #fff;
-    --seafoam: #9ee5c2;
+    --seafoam: #8ec7c8;
 }
 
 * {
@@ -25,15 +25,14 @@ header {
 }
 /* VECTOR IMAGE FROM:  https: //www.freepik.com/free-vector/geometrical-abstract-background_4394251.htm#query=geometric&position=9&from_view=search&track=sph */
 .divider {
-    height: 100px;
+    height: 50px;
     width: 100%;
-    margin-bottom: 25px;
     background-image: url("../images/vector-image.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 }
 
-h3 {
+.divider p {
     display: flex;
     justify-content: flex-end;
 }
@@ -43,19 +42,76 @@ h1 {
     background-color: var(--seafoam);
     color: var(--navy);
     padding: 0 1% 0 2%;
+    border-radius: 5px;
+}
+section {
+    margin: .5rem 0rem;
 }
 
-h2 {
-    margin: 2% 0;
-    font-size: 250%;
+h2{
+    margin-right: 2rem;
     border-right: 2px solid var(--navy);
-    padding: 3%;
+    padding: 0 .5rem;
 }
 
-a[href*='.css']::after {
-    content: '📝';
-    display: inline-block;
-    margin-left: 3px;
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container > div {
+    min-height: 3rem;
+    min-width: 13rem;
+    margin: .25rem;
+}
+
+.card {
+    border: 2px solid var(--seafoam);
+    border-radius: 3px;
+    padding: .25rem;
+    margin: .2rem;
+    background-image: url("../images/vector-image.png");
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card:hover{
+    box-shadow: inset 0px 0px 15px var(--seafoam), 0 0 15px var(--seafoam);
+}
+.card h3{
+    background: #13293de6;
+    color: var(--seafoam);
+    padding: 0 5px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0rem 1rem;
+    
+}
+.contact a {
+    font-weight: bold;
+    text-decoration: 3px underline var(--navy);
+    margin: .25rem;
+    color: var(--navy);
+}
+.contact a:hover {
+    background: var(--navy);
+    color: var(--seafoam);
+    text-decoration: 3px underline var(--seafoam);
+}
+
+section, footer {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: 2fr;
+    gap: 1em;
+    grid-template-areas:". .";
 }
 
 nav ul {
@@ -69,45 +125,48 @@ nav a {
     color: var(--seafoam);
     text-decoration: 2px underline;
 }
-/* more examples of psedo class on article 15 */
 nav a:hover {
     color: var(--white);
 }
 
-main {
-    display: flex;
-    flex: 1 1 0;
+main{
     max-width: 96%;
-    margin: 2% auto;
-}
-
-footer {
+    margin: 1% auto;
+    flex-wrap: wrap;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    padding: 2%;
-    background-color: var(--white);
-    color: var(--navy);
+    flex-direction: row;
+}
+.footer {
+    margin-left: 1.75%;
 }
 footer address {
-padding-left: 1.5rem;
+    display: flex;
+    justify-content: space-around;
 }
+
 footer a{
     font-weight: bold;
     text-decoration: 3px underline var(--navy);
-    margin: .5rem;
+    margin: .25rem;
     color: var(--navy);
 }
 footer a:hover {
-    text-decoration: 3px underline var(--seafoam);
+    box-shadow: inset 0px 0px 15px var(--seafoam), 0 0 7px var(--seafoam);
 }
 
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
+        flex-wrap: wrap;
     }
 
     main {
         max-width: 1200px;
+    }
+    footer a {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 }
