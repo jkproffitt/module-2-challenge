@@ -77,12 +77,43 @@ h2{
     border-radius: 3px;
     padding: .25rem;
     margin: .2rem;
-    background-image: url("../images/vector-image.png");
-    background-size: cover;
-    background-position: left;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.card-one {
+    background-image: url("../images/green-wave.jpg");
+    background-size: contain;
+    background-position: left;
+    width: 100%;
+    height: 10rem;
+}
+.card-two {
+    background-image: url("../images/navy-vector.jpg");
+    width: 30%;
+    height: 10rem;
+}
+.card-three {
+    background-image: url("../images/vector-image.png");
+    background-size: contain;
+    background-position: left;
+    width: 60%;
+    height: 10rem;
+}
+.card-four {
+    background-image: url("../images/sunflower-sky.jpg");
+    background-size: cover;
+    background-position: top;
+    width: 45%;
+    height: 10rem;
+}
+.card-five {
+    background-image: url("../images/4green-shades.jpg");
+    background-size: cover;
+    background-position: right;
+    width: 50%;
+    height: 10rem;
 }
 
 .card:hover{
@@ -142,9 +173,6 @@ main{
     max-width: 96%;
     margin: 1% auto;
     flex-wrap: wrap;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
 }
 .footer {
     margin-left: 1.75%;
