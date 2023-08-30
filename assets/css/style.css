@@ -23,6 +23,13 @@ header {
     background-color: var(--navy);
     color: var(--white);
 }
+html{
+    scroll-behavior: smooth;
+}
+img {
+    height: 30px;
+    border-radius: 12px;
+}
 /* VECTOR IMAGE FROM:  https: //www.freepik.com/free-vector/geometrical-abstract-background_4394251.htm#query=geometric&position=9&from_view=search&track=sph */
 .divider {
     height: 50px;
@@ -77,6 +84,7 @@ h2{
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 .card:hover{
     box-shadow: inset 0px 0px 15px var(--seafoam), 0 0 15px var(--seafoam);
 }
@@ -118,6 +126,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     min-width: 300px;
+    align-items: center;
 }
 
 nav a {
